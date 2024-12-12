@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Play:wght@400;700&family=Silkscreen:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+
+body {
+  @apply w-full h-dvh;
+  background: radial-gradient(
+        circle,
+        transparent 20%,
+        #000000 20%,
+        #000000 80%,
+        transparent 80%,
+        transparent
+      )
+      0% 0% / 38px 38px,
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #000000 20%,
+        #000000 80%,
+        transparent 80%,
+        transparent
+      )
+      19px 19px / 38px 38px,
+    linear-gradient(#6d7a94 1.5px, transparent 1.5px) 0px -0.75px / 19px 19px,
+    linear-gradient(90deg, #6d7a94 1.5px, #000000 1.5px) -0.75px 0px / 19px 19px
+      #000000;
+  background-size: 38px 38px, 38px 38px, 19px 19px, 19px 19px;
+  background-color: #000000;
+
+  #root {
+    @apply w-full h-full flex items-center justify-center text-xs;
+
+    .inputContainer {
+      @apply h-[30px] p-1 bg-black text-[#FAFAFE] flex flex-col flex-grow overflow-auto border-2 border-t-[#b5b5b5] border-l-[#b5b5b5] border-b-[#FAFAFE] border-r-[#FAFAFE];
+    }
+
+    .listItem {
+        @apply p-1 border border-black;
+        &:hover {
+            @apply border-[#6d7a945e] cursor-pointer;
+        }
+      &.selected {
+        @apply bg-[#6d7a945e] ;
+      }
+    }
+
+    .checkbox {
+      @apply font-bold;
+
+      .completed {
+        @apply text-red-500;
+      }
+    }
+
+    .myIcons {
+      .inner-con {
+        background-color: #eeeeee;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-bottom: 1px solid #c5c5c5;
+        border-right: 1px solid #c5c5c5;
+        padding: 2px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e0e0e0;
+          border-bottom: 1px solid white;
+          border-right: 1px solid white;
+          border-top: 1px solid #c5c5c5;
+          border-left: 1px solid #c5c5c5;
+        }
+      }
+      .svg-con svg {
+        background-color: #eeeeee;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-bottom: 1px solid #c5c5c5;
+        border-right: 1px solid #c5c5c5;
+        padding: 2px;
+        cursor: pointer;
+        // height: 19px;
+        // width: 19px;
+        // font-size: 12px;
+
+        &:hover {
+          background-color: #e0e0e0;
+          border-bottom: 1px solid white;
+          border-right: 1px solid white;
+          border-top: 1px solid #c5c5c5;
+          border-left: 1px solid #c5c5c5;
+        }
+      }
+    }
+  }
+}
